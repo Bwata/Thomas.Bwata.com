@@ -1,0 +1,988 @@
+/*** General Styling***************************************/
+
+html { overflow: hidden;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+ }
+
+.clear {
+	clear: both;
+}
+
+body {
+	width:1024px;
+	height:672px;
+	margin:0;
+	padding:0;
+	background-color: black;
+	background-image:url('../Images/wrist.jpg');
+	background-repeat:no-repeat;
+}
+
+#watchface {
+	position:absolute;
+	width:230px;
+	height:230px;
+	top: 223px;
+	left: 389px;
+	z-index:0;
+	border-radius: 115px;
+	overflow: hidden;
+	background-image:url('../Images/MainBackground.png');
+	background-repeat:no-repeat;
+}
+
+
+/*** Clock Face Styling***************************************/
+#hour {
+	position: absolute;
+	width:230px;
+	Top: 0px;
+	left:0px;
+
+    transition: all 0.3s ease-out;
+}
+
+#minute {
+	position: absolute;
+	width:230px;
+	Top: 0px;
+	left:0px;
+
+    transition: all 0.3s ease-out;
+}
+
+
+
+/*** Lock Screen Styling***************************************/
+#lockScreen {
+	position: absolute;
+	width:230px;
+	Top: 0px;
+	left:0px;
+	
+    transition: all 0.3s ease-out;
+}
+
+
+
+/*** Switcher Styling***************************************/
+
+#switcher {
+	position:absolute;
+	width:220px;
+	height:220px;
+	border-radius: 110px;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	transition: all .3s ease-out;
+	top: -230px;
+	left: 5px;
+	background: transparent;
+}
+
+#switcherTop {
+	position:absolute;
+	top:0;
+	left:0;
+	width: 220px;
+	height: 150px;
+	background: transparent;
+}
+
+#switcherControlSlide {
+	position: absolute;
+	top: 3px;
+	left: -1100px;
+	width: 2640px;
+	height: 150px;
+	transition: all .3s ease-out;
+	
+}
+
+.switcherControlItem {
+
+	float:left;
+	position: relative;
+	width:220px;
+	height:150px;
+
+}
+
+#switcherBottom {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width: 220px;
+	height: 70px;
+	background-Color: #87bff4;
+}
+
+#iconDot {
+	position: absolute;
+	top: 3px;
+	left: 78px;
+	width: 64px;
+	height: 64px;
+	background:white;
+	border-radius: 32px;
+}
+
+#switcherIconCover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 220px;
+	height: 70px;
+	background-image:url('../Images/SwitcherIcons/IconCover.png');
+	background-repeat:no-repeat;
+}
+
+#switcherIconSlide {
+	position: absolute;
+	top: 3px;
+	left: -242px;
+	width: 768px;		/*Icons: 64px wide with 12 icons*/
+	height:64px;
+
+		transition: all .3s ease-out;
+}
+
+.switcherIcon {
+	float:left;
+	width:50px;
+	height:50px;
+	margin: 7px;
+}
+
+/*** Switcher Controller General Styling***************************************/
+
+.list {
+	position:absolute;
+	top: 0px;
+	left: 29px;
+	
+	padding: 30px 0px;
+	padding-bottom: 80px;
+
+    transition: all 0.3s ease-out;
+}
+
+.listItem {
+	position: relative;
+	width: 156px;
+	margin:5px 0;
+	padding:0;
+	overflow:hidden;
+	
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+}
+
+.listItem h3 {
+	margin:0;
+	margin-left: 3px;
+	padding:0;
+}
+
+.listItem h4 {
+	margin:0;
+	padding:0;
+	text-align: center;
+}
+
+.listItem p {
+	margin:0;
+	margin-left: 3px;
+	padding:0;
+
+}
+
+.listItem img {
+	position: absolute;
+	margin:0;
+	top: 3px;
+	left: 3px;
+	padding:0;
+	width: 30px;
+	height: 30px;
+}
+
+/*** Switcher Music Styling***************************************/
+
+#albumCoverSwitch {
+	position:absolute;
+	width:130px;
+	height:130px;
+	bottom:0px;
+	left:45px;
+	border-radius: 20px;
+}
+
+#musicSwitch .listItem {
+	margin: 0 auto;
+	margin-top:123px;
+}
+
+.musicButton {
+	position:absolute;
+	width:40px;
+	height:40px;
+	background:white;
+	opacity: .8;
+	border-radius: 20px;
+	box-shadow: 0px 3px 5px #888888;
+	transition: all .3s ease-out;
+}
+
+.musicButton img {
+	position:relative;
+	width:34px;
+	height:34px;
+	margin:3px;
+	top:0;
+	left:0;
+	overflow:visible;
+}
+
+#musicPlay {
+	left:95px;
+	top: 3px;
+	opacity: 1;
+}
+
+#musicPause {
+	left:95px;
+	top: 3px;
+	opacity: 0;
+}
+
+#musicNext {
+	right:5px;
+	top: 80px;
+}
+
+#musicNext img {
+	width:30px;
+	height:30px;
+	margin:5px;
+}
+
+#musicPrev {
+	left:5px;
+	top: 80px;
+}
+
+#musicPrev img {
+	width:30px;
+	height:30px;
+	margin:5px;
+}
+
+#musicTitle {
+	width:auto;
+	max-width:200px;
+}
+
+
+/*** Switcher Phone Styling***************************************/
+
+#phoneSlide h3 {
+	margin-left: 37px;
+}
+
+#phoneSlide p {
+	margin-left: 37px;
+}
+
+
+/*** Switcher Pictures Styling***************************************/
+
+#picturesSlide .listItem img {
+	width:156px;
+	height:156px;
+	left:0;
+	top:0;
+	border-radius: 20px;
+}
+
+#picturesSlide .listItem {
+	margin:5px 0;
+	padding:0;
+	margin-left:3px;
+	width: 156px;
+	height:156px;
+	overflow:hidden;
+	border: 0px solid #9aaa3c;
+}
+
+
+/*** Switcher Weather Styling***************************************/
+
+#weatherSwitch {
+	width: 220px;
+	height:220px;
+}
+
+
+/*** Switcher Alarm Styling***************************************/
+
+#alarmSwitch img {
+	Position:absolute;
+	width:50px;
+	height:50px;
+	top:0;
+	left:85px;
+	
+}
+
+#alarmSwitch h2 {
+	text-align:Center;
+	margin:0;
+	padding:0;
+	margin-top: 55px;
+	font-size: 220%;
+}
+
+.alarmButton {
+	float:left;
+	margin: 0 2px;
+	width:50px;
+	height:50px;
+	background:white;
+	opacity: .8;
+	
+	border-radius: 25px;
+	
+	box-shadow: 0px 3px 5px #888888;
+	
+	transition: all .3s ease-out;
+}
+
+.alarmButton h3 {
+	text-align: center;
+	margin:0;
+	padding:0;
+	font-size: 190%;
+}
+
+.alarmButton h5 {
+	text-align: center;
+	margin:-5px 0;
+	padding:0;
+	text-height: 80%;
+}
+
+
+/*** Switcher Fitness Styling***************************************/
+
+#startStop {
+	Position:absolute;
+	width:50px;
+	height:50px;
+	top:0;
+	left:85px;
+}
+
+#fitnessMapSwitch {
+	position:absolute;
+	width:220px;
+	height:220px;
+	top:0;
+	left:0;
+}
+
+#fitnessData {
+	position:absolute;
+	width:150px;
+	top:50px;
+	left:29px;
+}
+
+#fitnessData h3 {
+	text-align:Center;
+	margin:0;
+	padding:0;
+	font-size: 150%
+}
+
+#fitnessData h5 {
+	margin:0 3px;
+	padding:0;
+	float:left;
+	font-size: 100%
+}
+
+/*** Switcher Settings Styling***************************************/
+
+#settingsSwitch h3 {
+	text-align:Center;
+	margin:0;
+	padding:0;
+	font-size: 150%
+}
+
+#settingsSwitch h5 {
+	text-align:Center;
+	margin:0;
+	padding:0;
+	font-size: 100%
+}
+
+
+/*** Switcher Camera Styling***************************************/
+
+#shutterImg {
+	position:absolute;
+	width:220px;
+	height:220px;
+}
+
+.cameraButton {
+	position:absolute;
+	width:40px;
+	height:40px;
+	background:white;
+	opacity: .8;
+
+	border-radius: 20px;
+	
+	box-shadow: 0px 3px 5px #888888;
+
+	transition: all .3s ease-out;
+}
+
+.cameraButtonImg {
+	position:relative;
+	width:30px;
+	height:30px;
+	margin:5px;
+	margin-left:5px;
+	top:0;
+	left:0;
+	overflow:visible;
+}
+
+#cameraCamera {
+	top: 102px;
+	left: 8px;
+}
+
+#cameraVid {
+	top: 102px;
+	right: 8px;
+}
+
+
+/*** Message Center Styling***************************************/
+
+.leftInfoBar {
+	position:absolute;
+	width:29px;
+	height:220px;
+	top: 0px;
+	left: 0px;
+}
+
+#messageCenter {
+	position:absolute;
+	width:220px;
+	height:220px;
+	top:5px;
+	right: -230px;
+	border-radius: 110px;
+	opacity: 1;
+	overflow: hidden;
+	transition: all .3s ease-out;
+
+}
+
+#mcSlide {
+	position:absolute;
+	top: 0px;
+	left: 29px;
+	
+	padding: 30px 0px;
+
+    transition: all 0.3s ease-out;
+
+}
+
+#mcSlide h3 {
+	margin:0;
+	margin-left: 37px;
+	padding:0;
+}
+
+#mcSlide h4 {
+	margin:0;
+	padding:0;
+	text-align: center;
+	
+}
+
+#mcSlide p {
+	margin:0;
+	margin-left: 37px;
+	padding:0;
+
+}
+
+#mcSlide img {
+	position: absolute;
+	margin:0;
+	top: 3px;
+	left: 3px;
+	padding:0;
+	width: 30px;
+	height: 30px;
+}
+
+
+/*** Specific App Styling***************************************/
+
+#apps iFrame {
+	position:absolute;
+	width:220px;
+	height:220px;
+	top:230px;
+	left: 5px;
+	
+	-moz-border-radius: 110px;
+	-webkit-border-radius: 110px;
+	-khtml-border-radius: 110px;
+	border-radius: 110px;
+	opacity: 1;
+	
+	overflow: hidden;
+	
+	-webkit-clip-path: circle(50%, 50%, 100%);
+	
+	-webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	 -o-transition: all .3s ease-out;
+		transition: all .3s ease-out;
+
+}
+
+#fitnessApp {
+	left: -230px;
+	top: 5px;
+}
+
+#textApp {
+	bottom: -230px;
+	left: 5px;
+}
+
+#cameraApp {
+	right: -230px;
+	top: 5px;
+}
+
+
+
+/*** Messages Styling***************************************/
+
+.messageBoxLeft {
+	position: relative;
+	width: 156px;
+	padding-right:10px;
+	padding-bottom:5px;
+}
+
+.messageBoxLeft .arrow{
+	position: absolute;
+	width:24px;
+	height:29px;
+	bottom:0;
+	left:0;
+	
+	background-image:url('../Images/MessageArrowLeft.png');
+	background-repeat:no-repeat;
+}
+
+.messageBoxRight {
+	position: relative;
+	width: 156px;
+	padding-left:10px;
+	padding-bottom:6px;
+}
+
+.messageBoxRight .arrow {
+	position: absolute;
+	width:24px;
+	height:29px;
+	bottom:0;
+	right:4px;
+	
+	background-image:url('../Images/MessageArrowRight.png');
+	background-repeat:no-repeat;
+}
+
+.messageItem {
+	position: relative;
+	width: 146px;
+	margin:5px 0;
+	padding:0;
+	overflow:hidden;
+	
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+}
+
+.messageItem h3 {
+	margin:0;
+	margin-left: 3px;
+	padding:0;
+}
+
+.messageItem h4 {
+	margin:0;
+	padding:0;
+	text-align: center;
+}
+
+.messageItem p {
+	margin:0;
+	margin-left: 3px;
+	padding:0;
+
+}
+
+/*** Pop Up Styling***************************************/
+
+#popUpWindow {
+	position:absolute;
+	width:174px;
+	height:174px;
+	top:230px;    /*Change later*/
+	left: 25px;
+	
+	-moz-border-radius: 90px;
+	-webkit-border-radius: 90px;
+	-khtml-border-radius: 90px;
+	border-radius: 90px;
+	opacity: 1;
+	
+	overflow: hidden;
+	
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+	
+	-webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	 -o-transition: all .3s ease-out;
+		transition: all .3s ease-out;
+
+}
+
+#popUpTopArrow {
+	position:absolute;
+	width: 64px;
+	height:21px;
+	top:3px;
+	left:58px;
+	
+}
+
+#popUpBotArrow {
+	position:absolute;
+	width: 64px;
+	height:21px;
+	bottom:3px;
+	left:58px;
+
+}
+#popUpTopTextSpace {
+	margin:0;
+	padding:0;
+	position:absolute;
+	width: 180px;
+	height:20px;
+	top:22px;
+	left:0px;
+}
+
+#popUpTopText {
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+#popUpBotTextSpace {
+	margin:0;
+	padding:0;
+	position:absolute;
+	width: 180px;
+	height:20px;
+	bottom:27px;
+	left:0px;
+} 
+
+#popUpBotText {
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+#popUpBodyText {
+	margin:auto;
+	padding:0;
+	position:absolute;
+	width: 150px;
+	height:50px;
+	top:62px;
+	left:15px;
+	text-align:center;
+	font-size:150%;
+}
+
+/*** Watch Body Styling***************************************/
+
+#watchBody {
+	position:absolute;
+	width:300px;
+	height:500px;
+	top:88px;
+	left:354px;
+	z-index:-1;
+	
+	background-image:url('../Images/watchBody.png');
+	background-repeat:no-repeat;
+
+}
+
+#watchBodyHack {
+	position:absolute;
+	width:300px;
+	height:500px;
+	top:88px;
+	left:354px;
+	z-index:5;
+	
+	background-image:url('../Images/watchBodyHack.png');
+	background-repeat:no-repeat;
+
+}
+
+#button1 {
+	
+	position:absolute;
+	width:60px;
+	height:65px;
+	top:306px;
+	left:615px;
+	z-index:-2;
+	
+	background-image:url('../Images/Button1.png');
+	background-repeat:no-repeat;
+}
+
+#button1Arrow {	
+	position:absolute;
+	width:314px;
+	height:76px;
+	top: 297px;
+	left: 640px;
+	
+	background-image:url('../Images/dialArrow.png');
+	background-repeat:no-repeat;
+}
+
+#button2 {
+	
+	position:absolute;
+	width:60px;
+	height:65px;
+	top:216px;
+	left:600px;
+	z-index:-2;
+	
+	background-image:url('../Images/Button2.png');
+	background-repeat:no-repeat;
+}
+
+#button2Arrow {	
+	position:absolute;
+	width:314px;
+	height:76px;
+	top:210px;
+	left:630px;
+	
+	background-image:url('../Images/notifArrow.png');
+	background-repeat:no-repeat;
+}
+
+
+/*** Misc Body Styling***************************************/
+
+
+#disclaim {
+	position:absolute;
+	width:1024px;
+	height: 20px;
+	top:652px;
+	left:0;
+	background:#eeeeee;
+	opacity:.3;
+}
+
+#disclaim p {
+	padding:0;
+	margin:0;
+	text-align:center;
+}
+
+#title {
+	position:absolute;
+	width:200px;
+	top:10px;
+	left:10px;
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+}
+
+#title h1 {
+	padding:0;
+	margin:0;
+	text-align:center;
+	opacity:1;
+	font-size: 300%;
+}
+
+#testInfoBox {
+	position:absolute;
+	width:310px;
+	top:100px;
+	left:10px;
+}
+
+.testNumButton {
+	float:left;
+	margin: 3px;
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+}
+
+.testNumButton h3 {
+	padding:0;
+	margin:5px 10px;;
+	text-align:center;
+}
+
+#taskTextBox {
+	float:left;
+	width:304px;
+	margin: 3px;
+	padding:0 3px;
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+}
+
+#taskStart {
+	float:left;
+	width:169px;
+	margin: 3px;
+	background: green;
+	border-radius: 10px;
+	opacity:.5;
+}
+
+#taskStart h3 {
+	padding:0;
+	margin:5px 10px;;
+	text-align:center;
+}
+
+#taskStop {
+	float:left;
+	width:169px;
+	margin: 3px;
+	background: red;
+	border-radius: 10px;
+	opacity:.5;
+}
+
+#taskStop h3 {
+	padding:0;
+	margin:5px 10px;;
+	text-align:center;
+}
+
+
+#userMessages {
+	position:absolute;
+	width:600px;
+	height:150px;
+	top:10px;
+	left:350px;
+}
+
+#userMessagesTitle {
+	margin: 3px;
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+
+}
+
+#userMessagesTitle h3{
+	padding:0;
+	margin:5px 10px;;
+	text-align:center;
+}
+
+#userMessagesTextBox{
+	float:left;
+	width:400px;
+	margin: 3px;
+	padding:0 3px;
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+
+}

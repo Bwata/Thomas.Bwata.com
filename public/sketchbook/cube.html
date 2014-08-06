@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="" content="">
+    <title></title>
+<style>
+
+body {
+
+}
+.wrap {
+	width: 900px;
+	margin: 50px auto;
+	-webkit-perspective: 6000px;
+	-webkit-perspective-origin: 400px 400px;
+}
+
+.cube {
+	position: relative;
+	width: 600px;
+	margin: 0 auto;
+	-webkit-transition: all 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateY(0deg);
+}
+
+.cube div {
+	position: absolute;
+	width: 600px;
+	height: 600px;
+}
+
+.back {
+	-webkit-transform: translateZ(-300px) rotateY(180deg);
+}
+.right {
+	-webkit-transform: rotateY(-270deg) translateX(300px);
+	-webkit-transform-origin: top right;
+}
+.left {
+	-webkit-transform: rotateY(270deg) translateX(-300px);
+	-webkit-transform-origin: center left;
+}
+.top {
+	-webkit-transform: rotateX(-90deg) translateY(-300px);
+	-webkit-transform-origin: top center;
+}
+.bottom {
+	-webkit-transform: rotateX(90deg) translateY(300px);
+	-webkit-transform-origin: bottom center;
+}
+.front {
+	-webkit-transform: translateZ(300px);
+}
+
+/*@-webkit-keyframes spin {
+	from { -webkit-transform: rotateY(0); }
+	to { -webkit-transform: rotateY(360deg); }
+}
+
+.cube {
+	-webkit-animation: spin 5s infinite linear;
+}*/
+
+.panel {
+background-color: white;
+}
+
+.front .panel {
+width: 560px;
+height: 560px;
+border: 20px solid #f9302b;
+}
+
+.back .panel {
+width: 560px;
+height: 560px;
+border: 20px solid #d6ecef;
+}
+
+.left .panel {
+width: 560px;
+height: 560px;
+border: 20px solid #4e61ed;
+}
+
+.right .panel {
+width: 560px;
+height: 560px;
+border: 20px solid #559946;
+}
+
+.buttons {
+	position: fixed;
+	top: 5px;
+	left: 5px;
+	width: 100px;
+}
+
+.button {
+	margin: 10px;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+</style>
+
+<script>
+var angle = 0;
+var side = 0;
+
+function rotate () {
+	console.log("clicked: " + angle);
+	var box = document.getElementById("cube");
+	angle = (angle + 45);
+	box.style.WebkitTransform = "rotateY(" + angle + "deg)"
+}
+
+function rotate2 (num) {
+
+	if ((side - num) == 1) {
+		angle = (angle - 90);
+	} else if ((side - num) == -1) {
+		angle = (angle + 90);
+	} else if ((side - num) == 2) {
+		angle = (angle - 180);
+	} else if ((side - num) == -2) {
+		angle = (angle + 180);
+	} else if ((side - num) == 3) {
+		angle = (angle + 90);
+	} else if ((side - num) == -3) {
+		angle = (angle - 90);
+	} else {
+		
+	}
+
+	side = num;
+
+	console.log("clicked: " + angle);
+	var box = document.getElementById("cube");
+	//angle = num;
+	box.style.WebkitTransform = "rotateY(" + angle + "deg)"
+}
+
+
+
+
+</script>
+</head>
+<body>
+        
+ <div class="wrap" onclick="rotate()">
+	<div id="cube" class="cube">
+		<div class="front"><div class="panel">fire</div></div>
+		<div class="back"><div class="panel">air</div></div>
+		<!-- <div class="top"><div class="panel">top</div></div> -->
+		<!-- <div class="bottom"><div class="panel">bottom</div></div> -->
+		<div class="left"><div class="panel">water</div></div>
+		<div class="right"><div class="panel">earth</div></div>
+	</div>
+</div>       
+     
+<div class="buttons">   
+	<div class="button" onclick="rotate2 (0)">fire</div>        
+	<div class="button" onclick="rotate2 (1)">water</div> 
+	<div class="button" onclick="rotate2 (2)">air</div> 
+	<div class="button" onclick="rotate2 (3)">earth</div>      
+</div>
+     
+</body>
+</html>

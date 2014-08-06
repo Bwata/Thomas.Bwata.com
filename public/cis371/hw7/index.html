@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="" content="">
+    <title>Homework 7</title>
+
+
+
+<script>
+
+	var XMLHttpRequestObject = false;
+
+	if (window.XMLHttpRequest) {
+		XMLHttpRequestObject = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
+// 	if(XMLHttpRequestObject) {
+//
+// 		XMLHttpRequestObject.open("GET", "lab7Processing.php?op=filldata");
+//
+// 		XMLHttpRequestObject.onreadystatechange = function() {
+//
+// 			if (XMLHttpRequestObject.readyState == 4) {
+//
+// 				var response = XMLHttpRequestObject.responseText;
+// 				console.log("response: " + response);
+//
+// 			}
+//
+// 		}
+// 	}
+// 	XMLHttpRequestObject.send(null);
+
+
+	//onload call to get list of states
+	function getStates() {
+		if(XMLHttpRequestObject) {
+
+		XMLHttpRequestObject.open("GET", "lab7Processing.php?op=states");
+
+
+		XMLHttpRequestObject.onreadystatechange = function() {
+
+			if (XMLHttpRequestObject.readyState == 4 &&
+						XMLHttpRequestObject.status == 200)
+
+				var response = XMLHttpRequestObject.responseText;
+
+				var jsonData = JSON.parse(response);
+
+				var dropDown = document.getElementById('dropDown');
+
+				for (var i in jsonData) {
+					var item = jsonData[i];
+					var newNode = document.createElement('option');
+					newNode.innerHTML = item;
+					newNode.value = item;
+					dropDown.appendChild(newNode);
+				}
+			}
+		}
+		XMLHttpRequestObject.send(null);
+	}
+
+
+	//edit this function to be called when the dropdown is changed
+	//get the stateID from dropdown and call source
+	function getPeople(state) {
+		console.log("testing 1");
+
+		if(XMLHttpRequestObject) {
+			XMLHttpRequestObject.open("GET", "lab7Processing.php?op=people&state=" + state);
+
+			XMLHttpRequestObject.onreadystatechange = function() {
+				if (XMLHttpRequestObject.readyState == 4 && XMLHttpRequestObject.status == 200) {
+					var response = XMLHttpRequestObject.responseText;
+					console.log("response: " + response);
+
+
+					//*********Working line *******************
+					document.getElementById('there').innerHTML = response;
+					
+					
+					xmlFromString = (new DOMParser()).parseFromString(response, "text/xml");
+					
+					console.log(xmlFromString);
+					
+					displayResult();//xmlFromString);
+					
+					
+					
+					
+					
+					
+					
+				}
+			}
+			XMLHttpRequestObject.send(null);
+		}
+	}
+	
+	
+function displayResult() //xml)
+{
+xml = loadXMLDoc("test.xml");
+xsl = loadXMLDoc("peopleState.xsl");
+// code for IE
+if (window.ActiveXObject || xhttp.responseType == "msxml-document")
+  {
+  ex = xml.transformNode(xsl);
+  document.getElementById("here").innerHTML = ex;
+  }
+// code for Chrome, Firefox, Opera, etc.
+else if (document.implementation && document.implementation.createDocument)
+  {
+  xsltProcessor = new XSLTProcessor();
+  xsltProcessor.importStylesheet(xsl);
+  resultDocument = xsltProcessor.transformToFragment(xml, document);
+  document.getElementById("here").appendChild(resultDocument);
+  }
+}
+	
+function loadXMLDoc(filename) {
+	if (window.ActiveXObject) {
+		xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} else {
+		xhttp = new XMLHttpRequest();
+	}
+	xhttp.open("GET", filename, false);
+	try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+		xhttp.send("");
+	return xhttp.responseXML;
+}
+
+
+</script>
+
+</head>
+<body onload="getStates()">
+
+
+<select id="dropDown" onchange="getPeople(this.value)">
+</select>
+
+<div id="here">
+
+</div>
+
+<div id="there">
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

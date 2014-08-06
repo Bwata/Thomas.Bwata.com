@@ -1,0 +1,131 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #fcf0d0; /* Old browsers */
+	background: -moz-linear-gradient(left, #fcf0d0 0%, #f7f4ed 50%, #fcf0d0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fcf0d0), color-stop(50%,#f7f4ed), color-stop(100%,#fcf0d0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #fcf0d0 0%,#f7f4ed 50%,#fcf0d0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #fcf0d0 0%,#f7f4ed 50%,#fcf0d0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #fcf0d0 0%,#f7f4ed 50%,#fcf0d0 100%); /* IE10+ */
+	background: linear-gradient(to right, #fcf0d0 0%,#f7f4ed 50%,#fcf0d0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf0d0', endColorstr='#fcf0d0',GradientType=1 ); /* IE6-9 */
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+	margin-left: 50px;
+}
+
+.timeline_col {
+	width: 50%;
+	height: 1000px;
+	float: left;
+	position: relative;
+}
+
+#left_timeline {
+}
+
+.time_bar {
+	width: 20px;
+	height: 100%;
+	background-color: blue;
+	position: absolute;
+	top: 0;
+}
+
+#left_timeline .time_bar {
+	right: 0;
+}
+
+#right_timeline .time_bar {
+	left: 0;
+}
+
+.event_container {
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 100px;
+	right: -10px;
+	z-index: 10;
+}
+
+.event_container .event_desc {
+	float: left;
+	width: 200px;
+	height: 100%;
+	background-color: #954418;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	overflow: hidden;
+	z-index: 0;
+	box-shadow: 5px 5px 5px #aaaaaa;
+
+}
+
+.event_container .event_desc .title {
+	width: 100%;
+	height: 30px;
+	background-color: #954418;
+}
+.event_container .event_desc .body {
+	width: 185px;
+	height: 170px;
+	float: right;
+	border-top-left-radius: 20px;
+	background-color: #cc5f25;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+
+	box-shadow: 5px 5px 5px #aaaaaa inset;
+}
+
+.event_container .event_desc .side_bar_surround {
+	width: 15px;
+	height: 170px;
+	float: right;
+	background-color: #954418;
+}
+
+.event_container .event_desc .side_bar {
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	bottom: -14px;
+	left: 0;
+	border-bottom-right-radius: 14px;
+	background-color: #954418;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+
+	box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+
+
+.event_container .event_arm {
+	width: 200px;
+	height: 30px;
+	float: left;
+	border-bottom-right-radius: 30px;	
+	background-color: #954418;
+	border-bottom: 1px solid black;
+	
+	box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+.event_container .armdot {
+	width: 30px;
+	height: 60px;
+	position: absolute;
+	top: -30px;
+	right: 0;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+
+	box-shadow: 5px 5px 5px #aaaaaa;
+	background-color: #954418;
+	border-right: 1px solid black;
+}

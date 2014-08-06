@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Alarm</title>
+
+<script>
+	var timer;
+	var msgNum = 0;
+	var messages = ["Good Morning", "Wake up", "WAKE UP"];
+	
+	timer = setTimeout("displayAlarm()", 3000);
+
+	
+	function displayAlarm() {
+		if (confirm(messages[msgNum]) == true) {
+			clearTimeout(timer);
+		} else {
+			if (msgNum == 2) {
+				clearTimeout(timer);
+			} else {
+				msgNum++;
+				timer = setTimeout("displayAlarm()", 3000);
+			}
+		}
+	};
+
+</script>
+
+<style>
+		body {
+			background-color: black;
+		}
+</style>
+
+
+</head>
+<body>
+        
+
+</body>
+</html>

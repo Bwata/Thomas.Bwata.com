@@ -1,0 +1,274 @@
+/*Mixins*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fcf0d0;
+  height: 5000px; }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  color: #f6d170; }
+
+h1 {
+  padding: .5ex; }
+
+header {
+  position: fixed;
+  width: 50%;
+  z-index: 5; }
+
+.hidden {
+  visibility: hidden;
+  display: none; }
+
+.timeline_col {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative; }
+  .timeline_col .date_mark {
+    position: absolute;
+    left: 0;
+    top: 2620px;
+    width: 100%;
+    border-top: 1px solid #f2cf41;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+    z-index: -1; }
+    .timeline_col .date_mark .date_mark_label {
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
+      /* Opera/IE 8+ */
+      color: #fcf0d0;
+      width: 100px;
+      height: 3ex;
+      background-color: #f2cf41;
+      text-align: center; }
+  .timeline_col .timeline_connector {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .timeline_col .timeline_label {
+    position: absolute;
+    top: 0px; }
+    .timeline_col .timeline_label .timeline_connector {
+      background-repeat: no-repeat;
+      background-size: contain; }
+  .timeline_col .time_bar {
+    width: 5px;
+    height: 100%;
+    border-style: solid;
+    border-width: 0px;
+    position: absolute;
+    z-index: 4; }
+  .timeline_col .time_bar_background {
+    width: 20px;
+    height: 100%;
+    background-color: #f2cf41; }
+  .timeline_col .event_container {
+    width: 85%;
+    position: absolute;
+    top: 100px; }
+    .timeline_col .event_container .event_title {
+      height: 30px;
+      width: 100%;
+      position: relative; }
+      .timeline_col .event_container .event_title .event_date {
+        position: absolute;
+        bottom: 4px; }
+    .timeline_col .event_container .event_body_border {
+      width: 70%;
+      min-width: 280px;
+      max-width: 500px;
+      position: relative; }
+      .timeline_col .event_container .event_body_border .event_body {
+        width: 90%;
+        min-width: 250px;
+        padding: 1ex;
+        margin-bottom: 10px;
+        overflow: hidden; }
+        .timeline_col .event_container .event_body_border .event_body p {
+          margin: 0;
+          padding: 0;
+          -webkit-box-sizing: border-box;
+          /* Safari/Chrome, other WebKit */
+          -moz-box-sizing: border-box;
+          /* Firefox, other Gecko */
+          box-sizing: border-box;
+          /* Opera/IE 8+ */
+          padding: 1ex; }
+        .timeline_col .event_container .event_body_border .event_body img {
+          margin: 0;
+          padding: 0;
+          width: 100%; }
+    .timeline_col .event_container .timeline_connector {
+      z-index: 1; }
+
+/** This section is for Coloring of events in the time bar *****/
+.timeline_colorBlue .timeline_label {
+  background-color: #3e5b81;
+  box-shadow: 0px 4px 2px #0c121a; }
+  .timeline_colorBlue .timeline_label .timeline_connector {
+    background-image: url("../images/colorBlue_connector_retinaS.png");
+    z-index: 6; }
+.timeline_colorBlue .time_bar {
+  background-color: #3e5b81;
+  box-shadow: 0px 4px 2px #1d2a3c; }
+.timeline_colorBlue .event_container .event_title {
+  background-color: #3e5b81;
+  box-shadow: 0px 4px 2px #1d2a3c;
+  border-top: solid 1px #8fa8c9; }
+.timeline_colorBlue .event_container .event_body_border {
+  background-color: #3e5b81;
+  box-shadow: 0px 4px 2px #0c121a; }
+  .timeline_colorBlue .event_container .event_body_border .event_body {
+    background-color: #6c8db9; }
+.timeline_colorBlue .event_container .timeline_connector {
+  background-image: url("../images/colorBlue_event_connector_retina.png"); }
+
+.timeline_colorGreen .timeline_label {
+  background-color: #5c813e;
+  box-shadow: 0px 4px 2px #121a0c; }
+  .timeline_colorGreen .timeline_label .timeline_connector {
+    background-image: url("../images/colorGreen_connector_retinaS.png");
+    z-index: 6; }
+.timeline_colorGreen .time_bar {
+  background-color: #5c813e;
+  box-shadow: 0px 4px 2px #2b3c1d; }
+.timeline_colorGreen .event_container .event_title {
+  background-color: #5c813e;
+  box-shadow: 0px 4px 2px #2b3c1d;
+  border-top: solid 1px #a9c98f; }
+.timeline_colorGreen .event_container .event_body_border {
+  background-color: #5c813e;
+  box-shadow: 0px 4px 2px #121a0c; }
+  .timeline_colorGreen .event_container .event_body_border .event_body {
+    background-color: #8fb96c; }
+.timeline_colorGreen .event_container .timeline_connector {
+  background-image: url("../images/colorGreen_event_connector_retina.png"); }
+
+.timeline_colorRed .timeline_label {
+  background-color: #ae251e;
+  box-shadow: 0px 4px 2px #2c0908; }
+  .timeline_colorRed .timeline_label .timeline_connector {
+    background-image: url("../images/colorRed_connector_retinaS.png");
+    z-index: 6; }
+.timeline_colorRed .time_bar {
+  background-color: #ae251e;
+  box-shadow: 0px 4px 2px #57130f; }
+.timeline_colorRed .event_container .event_title {
+  background-color: #ae251e;
+  box-shadow: 0px 4px 2px #57130f;
+  border-top: solid 1px #e9827c; }
+.timeline_colorRed .event_container .event_body_border {
+  background-color: #ae251e;
+  box-shadow: 0px 4px 2px #2c0908; }
+  .timeline_colorRed .event_container .event_body_border .event_body {
+    background-color: #e15851; }
+.timeline_colorRed .event_container .timeline_connector {
+  background-image: url("../images/colorRed_event_connector_retina.png"); }
+
+/** This section is for positioning of events in the time bar *****/
+.left_timeline .timeline_label {
+  right: 0px;
+  border-bottom-left-radius: 30px;
+  padding-left: 20px;
+  padding-right: 15px; }
+  .left_timeline .timeline_label .timeline_connector {
+    right: 0px; }
+.left_timeline .time_bar {
+  right: 0px; }
+.left_timeline .time_bar_background {
+  float: right; }
+.left_timeline .date_mark .date_mark_label {
+  float: left;
+  border-bottom-right-radius: 1.25ex; }
+.left_timeline .event_container {
+  right: 0px; }
+  .left_timeline .event_container .event_title {
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 20px; }
+    .left_timeline .event_container .event_title h2 {
+      float: left;
+      margin-left: 35px; }
+    .left_timeline .event_container .event_title .event_date {
+      right: 0px;
+      margin-right: 25px; }
+  .left_timeline .event_container .event_body_border {
+    float: left;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 20px; }
+    .left_timeline .event_container .event_body_border .event_body {
+      float: right;
+      margin-right: 10px;
+      margin-left: 20px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 20px; }
+  .left_timeline .event_container .timeline_connector {
+    right: 0px;
+    right: 0px;
+    top: -14px; }
+
+.right_timeline .timeline_label {
+  left: 0px;
+  border-bottom-right-radius: 30px;
+  padding-right: 20px;
+  padding-left: 15px; }
+  .right_timeline .timeline_label .timeline_connector {
+    left: 0px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH"; }
+.right_timeline .time_bar {
+  left: 0px; }
+.right_timeline .time_bar_background {
+  float: left; }
+.right_timeline .date_mark .date_mark_label {
+  float: right;
+  border-bottom-left-radius: 1.25ex; }
+.right_timeline .event_container {
+  left: 0px; }
+  .right_timeline .event_container .event_title {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 20px; }
+    .right_timeline .event_container .event_title h2 {
+      float: right;
+      margin-right: 35px; }
+    .right_timeline .event_container .event_title .event_date {
+      left: 0px;
+      margin-left: 25px; }
+  .right_timeline .event_container .event_body_border {
+    float: right;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 20px; }
+    .right_timeline .event_container .event_body_border .event_body {
+      float: left;
+      margin-left: 10px;
+      margin-right: 20px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 20px; }
+  .right_timeline .event_container .timeline_connector {
+    left: 0px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    left: 0px;
+    top: -14px; }

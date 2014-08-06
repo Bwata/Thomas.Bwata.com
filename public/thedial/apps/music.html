@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="testtouch" content="testtouch">
+    <title>theDial</title>
+    <link href="../CSS/app2.css" rel="stylesheet">
+    <meta name="viewport" 
+  content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+</head>
+
+<!-- TODO: 
+	- finish the content
+	- make rick play music
+	- work in logging -->
+
+<!-- ['popUp', 'Text', 'top', 'bottom', 'action'] -->
+<!-- ['user_message', 'message'] -->
+<!-- app, headers, footers, openStack, openIndex -->
+<body id="watchface" onload="app_setUp('music', 
+{musicMain: 'Music', albums: 'Albums', songs: 'Whenever You', singleSong: 'Rick Astley'}, 
+{musicMain: true, albums: true, songs: true, singleSong: false}, 
+['musicMain'], 0)">
+	
+	
+	<div id="appFrame">
+			
+			<!-- Music -->
+			<div class="section" id="musicMain">
+				<div class="list" id="musicMainslide">
+					<a onclick="parent_message(['NotI', 'MusicApp-Music : Press Genre : Miss'])">
+					<div class="listItem">
+						<h3>Genres</h3>
+					</div>
+					</a>
+		
+					<a onclick="parent_message(['NotI', 'MusicApp-Music : Press Artists : Miss'])">
+					<div class="listItem">
+						<h3>Artists</h3>
+					</div>
+					</a>
+					
+					<a onclick="item_scroll_left ('albums')">
+					<div class="listItem">
+						<h3>Albums</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Music : Press Songs : Miss'])">
+					<div class="listItem">
+						<h3>Songs</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Music : Press Playlists : Miss'])">
+					<div class="listItem">
+						<h3>Playlists</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Music : Press Random : Miss'])">
+					<div class="listItem">
+						<h3>Random</h3>
+					</div>
+					</a>
+
+				</div>
+			</div>
+	
+			<!-- Albums -->
+			<div class="section" id="albums">
+				<div class="list" id="albumsslide">
+					<a onclick="parent_message(['NotI', 'MusicApp-Albums : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>Drunken Lullabies</h3>
+					</div>
+					</a>
+		
+					<a onclick="parent_message(['NotI', 'MusicApp-Albums : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>Maggot Brain</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Albums : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>Pieces of Eight</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Albums : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>Punk In Drublic</h3>
+					</div>
+					</a>
+					
+					<a onclick="item_scroll_left ('songs')">
+					<div class="listItem">
+						<h3>Whenever You Need Somebody</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Albums : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>White Album</h3>
+					</div>
+					</a>
+
+				</div>
+			</div>
+	
+			<!-- Songs -->
+			<div class="section" id="songs">
+				<div class="list" id="songsslide">
+					<a onclick="item_scroll_left ('singleSong')">
+					<div class="listItem">
+						<h3>Never Gonna Give You Up</h3>
+					</div>
+					</a>
+		
+					<a onclick="parent_message(['NotI', 'MusicApp-Songs : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>Whenever You Need Somebody</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Songs : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>Together Forever</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Songs : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>It Would Take A Strong Strong Man</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Songs : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>The Love Has Gone</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Songs : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>Don't Say Goodbye</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Songs : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>Slipping Away</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Songs : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>No More Looking For Love</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Songs : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>You Move Me</h3>
+					</div>
+					</a>
+					
+					<a onclick="parent_message(['NotI', 'MusicApp-Songs : Press ?? : Miss'])">
+					<div class="listItem">
+						<h3>When I Fall In Love</h3>
+					</div>
+					</a>
+					
+				</div>
+			</div>
+		
+			<!-- song -->
+			<div class="section" id="singleSong">
+				<div class="list" id="singleSongslide">
+					<div id="musicPlayer">
+						<img src="../Images/rick.jpg" id="albumCover">
+						
+						<a onclick="play_music()">
+							<div class="musicButton" id="musicPlay">
+								<img class="musicButtonImg" src="../Images/SwitcherIcons/play.png">
+							</div>
+						</a>
+						
+						<a onclick="pause_music()">
+							<div class="musicButton" id="musicPause">
+								<img class="musicButtonImg" src="../Images/SwitcherIcons/pause.png">
+							</div>
+						</a>
+						
+						<a onclick="parent_message(['NotI', 'MusicApp-RickSong : Press Next : Miss'])">
+							<div class="musicButton" id="musicNext">
+								<img class="musicButtonImg" src="../Images/SwitcherIcons/nextTrack.png">
+							</div>
+						</a>
+						
+						<a onclick="parent_message(['NotI', 'MusicApp-RickSong : Press Prev : Miss'])">
+							<div class="musicButton" id="musicPrev">
+								<img class="musicButtonImg" src="../Images/SwitcherIcons/prevTrack.png">
+							</div>
+						</a>
+						
+						<div class="listItem" id="musicTitle">
+							<h4 id="songTitleSwitch">Never Gonna Give...</h4>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		
+
+	
+	</div>
+
+	<div class="headerBox">
+		<img src="../Images/SwitcherIcons/Music.png">
+		<h4 id="headerText"></h4>
+	</div>
+	
+	<a onclick="footer_button()">
+		<div id="footerBox">
+			<img class="centerImg" src="../Images/SwitcherIcons/play.png">
+		</div>
+	</a>
+
+	<script src="../Javascripts/app2.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+.DS_Store
+loginConfig.php
+Resources/**/*
+*.sublime-project
+*.sublime-workspace
+*.sql

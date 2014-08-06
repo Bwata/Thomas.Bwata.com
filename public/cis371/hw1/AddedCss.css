@@ -1,0 +1,111 @@
+/* My Styling */
+
+body {
+	font-family: "times medium";
+	color: black;
+	width:720px;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+ol {
+	list-style-type: lower-alpha;
+}
+
+ul {
+	color: blue;
+}
+
+table { 
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+
+#top h1 {
+	font-size: 200%;
+}
+
+#top a {
+	text-decoration: underline;
+}
+
+#top a:hover {
+	color: red;
+}
+
+#top a:visited {
+	color: green;
+}
+
+#top img { 
+	float:right;
+	width: 150px;
+	margin-left: 5px;
+}
+
+.cell {
+	width: 340px;
+	height: 160px;
+	margin: 4px;
+	padding: 5px;
+	border: 3px solid #ccc;
+}
+
+	.cell h3 {
+		text-align: center;
+		margin: 3px 0px;
+		margin-bottom: 6px;
+		padding-bottom: 3px;
+		border-bottom: 2px solid #444;
+	}
+
+	.cell h5 {
+		color: black;
+		margin: 3px 0px;
+	}
+
+	.cell p {
+		font-size: small;
+	}
+
+	.cell img {
+		display: block; 
+		width: 100px;
+		margin: 3px auto;
+	}
+
+.odd {
+	float: left;
+	margin-left: 0px;
+	background-color: #ccc;
+}
+
+.even {
+	float: right;
+	margin-right: 0px;
+	border-color: #ccc;
+}
+
+.best {
+	font-style:italic;
+}
+
+a {
+	text-decoration: none;
+}
+
+	a h5 {
+		padding: 2px;
+		border-bottom: 2px solid red;
+		border-left: 2px solid red;
+	}
+
+	a:visited h5 {
+		border-bottom: 2px solid green;
+		border-left: 2px solid green;
+	}
+
+.links {
+	font-family: "sans-serif";
+}

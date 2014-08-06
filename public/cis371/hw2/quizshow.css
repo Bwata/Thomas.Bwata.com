@@ -1,0 +1,58 @@
+/* The CSS for the quiz assignment: by thomas verstraete */
+
+body {
+	background-color: #aaaaaa;
+	margin-top: 25px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	color: black;
+}
+
+h1 {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+#buttonboxes {
+	margin: 0 auto;
+}
+
+	#buttonboxes h3 {
+		text-align: center;
+		color: yellow;
+		cursor: pointer;
+	}
+
+	#buttonboxes h3:hover {
+		text-align: center;
+		color: white;
+		cursor: pointer;
+	}
+
+#quesAnswered {
+	text-align: center;
+}
+
+.correct {
+	border:2px solid green;
+}
+
+.incorrect {
+	border: 2px solid red;
+}
+
+.ansContainer {
+	margin: 5px;
+
+}
+	.ansContainer h5 {
+		float: left;
+		padding:1em;
+		border: 1px solid gray;
+	}
+
+

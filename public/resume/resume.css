@@ -1,0 +1,338 @@
+/*   Reset Styling   */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ol, ul, li, blockquote, pre, form, lable, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body, p {
+	line-height: 1;
+	font-family: 'Roboto', sarif;
+	font-size: 8pt;
+}
+
+p, h1, h2, h3, h4, h5, h6, ol, ul, li { margin: 5pt; color:#5a5a5a; }
+li { margin-left: 2em; }
+
+h1, h2, h3, h4, h5, h6 {
+	
+	line-height:1;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 { font-size: 200%; }
+h2 { font-size: 180%; }
+h3 { font-size: 160%; }
+h4 { font-size: 140%; }
+h5 { font-size: 120%; }
+h6 { font-size: 100%; }
+
+pre { font-family: consolas, monospace; }
+
+.clear {
+	clear: both;
+}
+
+/********************* Resume Styling **************************/
+
+body {
+	width: 715px;
+	margin: 0 auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#body {
+	margin-top: 70px;
+	margin-bottom: 35px;
+}
+
+#header {
+	position: fixed;
+	top:0;
+	width:715px;
+	height: 63px;
+	margin-bottom:10px;
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	
+	-moz-top-left-border-radius:0;
+	-webkit-top-left-border-radius:0;
+	-khtml-top-left-border-radius:0;
+	border-top-left-radius:0;
+	
+	-moz-top-right-border-radius:0;
+	-webkit-top-right-border-radius:0;
+	-khtml-top-right-border-radius:0;
+	border-top-right-radius:0;
+	
+	background-image:url('HourglassSmall.png');
+	background-repeat:no-repeat;
+	background-size: 75px 75px;
+	background-color: #ff3333;
+	box-shadow: 1px 1px 3px #888888;
+	
+	-webkit-transition: all 0.1s ease-out;
+       -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+         -o-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+}
+
+	
+	#header:hover {
+		border-top: 5px solid #ff3333;
+		box-shadow: 4px 4px 7px #888888;
+		margin-bottom:8px;
+	}
+
+
+	#header h1 {
+		font-size: 400%;
+		margin-left: 80px;
+		margin-bottom:0;
+		margin-top:0;
+	}
+
+	.left80 {
+		margin-left: 80px;
+	}
+
+	#header h4 {
+		float: left;
+		padding-bottom: 10px;
+		margin-bottom:0;
+		margin-top:0;
+	}
+
+.wide {
+	margin-bottom: 10px;
+	margin-top: 70px;
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	
+	
+	border: 3px solid #33ff38;
+	box-shadow: 1px 1px 3px #888888;
+	
+	-webkit-transition: all 0.1s ease-out;
+       -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+         -o-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+}
+
+	.wide:hover {
+		margin-top:73px;
+		box-shadow: 4px 4px 7px #888888;
+		margin-bottom:8px;
+	}
+
+	.wide h2 {
+		padding: 3px;
+		margin: 0;
+		padding-left: 35px;
+	}
+
+#objective {
+	border: 3px solid #33ff38;
+}
+
+	#objective h2 {
+		background-image:url('ObjTargetSmall.png');
+		background-repeat:no-repeat;
+		background-color:#33ff38;
+	}
+
+
+#right {
+	float: right;
+}
+
+#left {
+	float: left;
+}
+
+.prime {
+	width: 485px;
+	padding: 0;
+	margin: 5px;
+	margin-right: 0;
+	margin-top:0;
+	
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	
+	box-shadow: 1px 1px 3px #888888;
+	
+    -webkit-transition: all 0.1s ease-out;
+       -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+         -o-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+}
+	
+	.prime:hover {
+		margin-left: 3px;
+		box-shadow: 4px 4px 7px #888888;
+	}
+
+
+	.prime h2 {
+		padding: 3px;
+		margin: 0;
+		padding-left: 35px;
+	}
+
+
+#experience {
+	border: 3px solid #ffc833;
+}
+
+	#experience h2 {
+		background-image:url('ExpHammerSmall.png');
+		background-repeat:no-repeat;
+		background-color:#ffc833;
+	}
+
+#education {
+	border: 3px solid #33d1ff;
+}
+
+	#education h2 {
+		background-image:url('EduBooksSmall.png');
+		background-repeat:no-repeat;
+		background-color:#33d1ff;
+	}
+
+.unit {	
+	margin:7px 0;
+}
+
+.side {
+	width: 205px;
+	padding: 0;
+	margin: 5px;
+	margin-left: 0;
+	margin-top: 0;
+	margin-bottom: 20px;
+	
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	
+	box-shadow: 1px 1px 3px #888888;
+	
+    -webkit-transition: all 0.1s ease-out;
+       -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+         -o-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+}
+	
+	.side:hover {
+		margin-left: 3px;
+		box-shadow: 4px 4px 7px #888888;
+	}
+
+	.side h2 {
+		padding: 3px;
+		margin: 0;
+		padding-left: 35px;
+	}
+
+#skills {
+	border: 3px solid #d85aa1;
+}
+
+	#skills h2 {	
+		background-image:url('SkillsGearSmall.png');
+		background-size:27px 27px;
+		background-repeat:no-repeat;
+		background-color: #d85aa1;
+		margin-bottom:8px;
+	}
+
+	#skills h3 {
+		margin-left:0;
+		margin-right:0;
+		border-top: 3px solid #d85aa1;
+		border-bottom: 3px solid #d85aa1;
+		text-align: center;
+		padding-top:4px;
+	}
+
+	#skills p {
+		text-align: center;
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 12pt;
+		line-height: 1.25;
+	}
+
+.date {
+	float: right;
+	margin:0;
+	margin-right: 5pt;
+}
+
+.footer {
+	position: fixed;
+	bottom:0;
+	height: 30px;
+	width:715px;
+	margin-top:10px;
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	
+	-moz-bottom-left-border-radius:0;
+	-webkit-bottom-left-border-radius:0;
+	-khtml-bottom-left-border-radius:0;
+	border-bottom-left-radius:0;
+	
+	-moz-bottom-right-border-radius:0;
+	-webkit-tbottomop-right-border-radius:0;
+	-khtml-bottom-right-border-radius:0;
+	border-bottom-right-radius:0;
+	
+	background-color: #ff3333;
+	box-shadow: 1px 1px 3px #888888;
+	
+	-webkit-transition: all 0.1s ease-out;
+       -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+         -o-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+}
+
+	
+	.footer:hover {
+		border-bottom: 5px solid #ff3333;
+		box-shadow: 4px 4px 7px #888888;
+		margin-top:8px;
+	}
+
+	.footer h3 {
+		text-align: right;
+	}

@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="presentation" content="presention">
+    <title>Securing User Passwords</title>
+    <link href="main.css" rel="stylesheet">
+    
+    
+</head>
+<body>
+		<!-- ********************  title slide  ******************** -->
+	  <div class="slide" id="slide0">
+	  <div class="realSlide">
+	  	<h1>Securing User Passwords</h1>
+	  	<h2>Thomas Verstraete</h2>
+	  </div>
+	  </div>
+	  
+	  <!-- why secure slide -->
+	  <div class="slide" id="slide1">
+	  <div class="realSlide">
+	  	<h1>Why?</h1>
+	  	<p>News Reports all the time!</p>
+	  	<div id="logos">
+	  		<img src="images/Target_logo.png">
+	  		<img src="images/evernote.jpg">
+	  		<img src="images/kickstarter-logo.png">
+	  		<img src="images/boxee.jpg">
+	  		<div class="clear"></div>
+	  	</div>
+	  	<div class="clear"></div>
+	  	<h3>This presentation is not about database security.<br>Just about securing the passwords</h3>
+	  </div>
+	  </div>
+	  
+	  <!-- ********************  requirements  ******************** -->
+	  <div class="slide" id="slide2">
+	  <div class="realSlide">
+	  	<h1>Requirements</h1>
+	  	<h3>What you need for what to do</h3>
+	  	<div id="reqImages">
+	  		<div class="req">
+	  			<h4>MySQL 4.1.3+</h4>
+	  			<img src="images/MySQL.png">
+	  		</div>
+	  		<div class="req">
+	  			<h4>PHP 5.3+</h4>
+	  			<img src="images/php-logo.jpg">
+	  		</div>
+	  		<div class="req">
+	  		<h4>PHpass</h4>
+	  			<img src="images/openwall.png">
+	  		</div>
+	  		<div class="clear"></div>
+	  	</div>
+	  </div>
+	  </div>
+	  
+	  <!-- ********************  phpass and hashing  ******************** -->
+	  <div class="slide" id="slide3">
+	  <div class="realSlide">
+	  	<h1>PHpass and Hashing</h1>
+	  	<ul>
+	  		<li>Encryption implies decryption.</li>
+	  		<li>Hashing is a one way function, no going back.</li>
+	  		<li>PHpass Hashes the passwords with Salts and Stretching.</li>
+	  		<li>It is best to leave it to the people who know.</li>
+	  	</ul>
+	  </div>
+	  </div>
+	  
+	  <!-- ********************  database  ******************** -->
+	  <div class="slide" id="slide4">
+	  <div class="realSlide">
+	  	<h1>Database</h1>
+	  	<h5>Create separate database of just user info</h5>
+	  	<h5>Create user with select, update and insert privileges</h5>
+	  	<h5>Create a table with the user info</h5>
+	  	<pre><code>
+CREATE TABLE `database_name`.`table_name`(
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`username` VARCHAR(30) NOT NULL,
+`email` VARCHAR(50) NOT NULL,
+`password` CHAR(128) NOT NULL,
+CONSTRAINT uniqueUserEmail UNIQUE (username, email)
+)
+	  	</code></pre>
+	  </div>
+	  </div>
+	  
+	  <!-- ********************  file structure  ******************** -->
+	  <div class="slide" id="slide5">
+	  <div class="realSlide">
+	  	<h1>Setting up the Files</h1>
+	  </div>
+	  </div>
+	  
+	  <!-- ********************   ******************** -->
+	  <div class="slide" id="slide6">
+	  <div class="realSlide">
+	  	<h1>Accessing the database</h1>
+	  	<h5></h5>
+	  	<pre><code>
+
+/** * These are the database login details */
+define(“HOST”,”database_host_name”);// The host you want to connect to.
+define(“USER”,”database_basic_user_name”);// The database username.
+define(“PASSWORD”,”password”);// The database password.
+define(“DATABASE”,”database_name”);// The database name.
+define(“PORT”, 3306);//port number of database
+
+//for PHpass
+define(“HASH_COST_LOG2”, 8);// Base-2 logarithm of the iteration count used for password stretching
+define(“HASH_PORTABLE”, FALSE);// Do we require the hashes to be portable to older systems (less secure)?
+
+	  	</code></pre>
+	  </div>
+	  </div>
+        
+        
+        
+        
+       <script src="presentation.js" type="text/javascript"></script> 
+</body>
+</html>

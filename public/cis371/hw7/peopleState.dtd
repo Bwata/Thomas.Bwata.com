@@ -1,0 +1,7 @@
+<!-- peopleState.dtd -->
+<!ELEMENT people (person+)>
+<!ELEMENT person (firstName, lastName, address, phone)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>

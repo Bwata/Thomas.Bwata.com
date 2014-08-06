@@ -1,0 +1,56 @@
+<html>
+<body>
+<h1 align="center">Famous Quotes</h1>
+<h2 id="personName" align="center">No one</h2>
+<p align="center" ><img id="pic" src="" \></p>
+<p id="quote">Make no little plans. They have no magic to stir men's blood and probably themselves will not be realized. Make big plans; aim high in hope and work, remembering that a noble, logical diagram once recorded will never die, but long after we are gone will be a living thing, asserting itself with ever-growing insistency. Remember that our sons and grandsons are going to do things that would stagger us. Let your watchword be order and your beacon beauty. Think big. </p>
+
+	<input type="button" name="danial" onclick="getQuote('test.php')">Daniel Burnham</input>
+	<button onclick="getQuote('www.cis.gvsu.edu/~scrippsj/cs371/inClass/week7.php?nbr=2')">Michael Jordan</button>
+	<button onclick="getQuote('www.cis.gvsu.edu/~scrippsj/cs371/inClass/week7.php?nbr=3')">Queen Elizabeth I</button>
+
+
+<script>
+
+var XMLHttpRequestObject = false;
+
+if (window.XMLHttpRequest) {
+	XMLHttpRequestObject = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+	XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+} else {
+	document.getElementById("personName").style.color = "blue";
+}
+
+
+
+
+function getQuote(source) {
+
+	if(XMLHttpRequestObject) {
+		
+		XMLHttpRequestObject.open("GET", source);
+		
+		
+		XMLHttpRequestObject.onreadystatechange = function() { 
+			
+			if (XMLHttpRequestObject.readyState == 4)
+					
+					var response = XMLHttpRequestObject.responseText;
+					
+					document.getElementById("quote").innerHTML = response;
+					
+					document.getElementById("quote").style.color = "red";
+			}
+		}
+		XMLHttpRequestObject.send(null);
+	}
+}
+
+
+
+</script>
+
+
+</body>
+</html>

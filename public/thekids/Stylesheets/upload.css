@@ -1,0 +1,25 @@
+/*Mixins*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fcf0d0;
+  height: 5000px; }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  color: #f6d170; }
+
+h1 {
+  padding: .5ex; }
+
+header {
+  position: fixed;
+  width: 50%;
+  z-index: 5; }
+
+.timeline_col {
+  height: 100%; }
+
+.left_timeline .event_container .event_body_border {
+  width: 100%; }

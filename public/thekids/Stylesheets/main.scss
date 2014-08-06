@@ -1,0 +1,85 @@
+//Colors
+$backgroundColor: #fcf0d0;
+$timeBarColor: #f2cf41;
+$borderBrown: #4e3b1a;
+$darkBrown: #954418;
+$lightBrown: #cc5f25;
+
+$colorBlue_blue: #3e5b81;
+$colorGreen_green: #5c813e;
+$colorRed_red: #ae251e;
+
+
+$timelineTypes : (
+  colorBlue : (lighten($colorBlue_blue, 20%), $colorBlue_blue),
+  colorGreen : (lighten($colorGreen_green, 20%), $colorGreen_green),
+  colorRed : (lighten($colorRed_red, 20%), $colorRed_red)
+  );
+
+/*Mixins*/
+
+@mixin noSpace {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin shadow($is_inset, $color: black) {
+  @if $is_inset {
+    box-shadow: 0px 4px 2px $color inset;
+  } @else {
+    box-shadow: 0px 4px 2px $color;
+  }
+}
+
+@mixin boxSizing($value) {
+  -webkit-box-sizing: $value; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: $value;    /* Firefox, other Gecko */
+  box-sizing: $value;         /* Opera/IE 8+ */
+}
+
+@mixin flipImageHoriz {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+@mixin flipImageVert {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
+
+@mixin labelConnectorImage ($color) {
+  background-image: url("../images/#{$color}_connector_retinaS.png");
+}
+
+@mixin eventConnectorImage ($color) {
+  background-image: url("../images/#{$color}_event_connector_retina.png");
+}
+
+body {
+  @include noSpace;
+  background-color: $backgroundColor;
+  height: 5000px;
+}
+
+h1, h2, h3, h4{
+  @include noSpace;
+  color: darken($backgroundColor, 20%);
+}
+
+h1 {
+  padding: .5ex;
+}
+
+header {
+  position: fixed;
+  width: 50%;
+  z-index: 5;
+}

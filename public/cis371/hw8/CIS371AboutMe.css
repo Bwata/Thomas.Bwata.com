@@ -1,0 +1,71 @@
+/* My Styling */
+
+body {
+	font-family: "times medium";
+	color: black;
+}
+
+tables p {
+	font-size: small;
+}
+
+ol {
+	list-style-type: lower-alpha;
+}
+
+ul {
+	color: blue;
+}
+
+ul li {
+	transition: all 1s;
+}
+
+.nonemph {
+	font-size: 100%;
+	border: 0px solid red;
+	padding: 0px;
+}
+
+#tabs-1 .emph {
+	font-size: 300%;
+	color: red;
+	border: 2px solid red;
+	padding: 5px;
+}
+
+.best {
+	font-style:italic;
+}
+
+a {
+	color: red;
+}
+
+a:visited {
+	color: green;
+}
+
+.odd {
+	background-color: #ccc;
+}
+
+.links {
+	font-family: "sans-serif";
+}
+
+.even img {
+	width: 100px;
+	float:none;
+}
+
+#top img { 
+	float:right;
+}
+
+#inspire {
+	width: 400px;
+	float: left;
+	transition: all 2s;
+}
+

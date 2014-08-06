@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0054)http://www.cis.gvsu.edu/~scrippsj/cs371/labs/lab04.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="./CS 371 Lab 4_files/style.css" type="text/css">
+<title>CS 371 Lab 4</title>
+<style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head>
+<body>
+<div id="heading">
+<table>
+	<tbody><tr>
+		<td id="headCol1">CS 371</td>
+		<td id="headCol2">Web-Based Programming</td>
+		<td id="headCol3">Winter 2014</td>
+	</tr>
+</tbody></table>
+	<p>Homework 4 - PHP basics</p>
+</div>
+
+<div>
+	<h1>Objectives</h1>
+	<ul>
+		<li>get familiar with php</li>
+		<li>pass data from a form to a server script</li>
+	</ul>
+</div>
+
+<div>
+	<img src="./CS 371 Lab 4_files/hw04pic.jpg" class="rightFloat">
+	<h1>Instructions</h1>
+	<p>Write a webpage that displays the number of patients for each blood type.  First, you need to copy the file <a href="http://www.cis.gvsu.edu/~scrippsj/cs371/labs/patients.txt">patients.txt</a> to your server.  You should look through this file in an editor.  There are 1000 records (separated by end-of-line marks) representing 1000 patients.  Each patient has a patient number, gender, weight, blood type and indicator for a virus (this is not real data).  </p>
+
+	<p>You will write two webpages for this lab.  The first will have a form to allow the user to enter their preferences for the report.  The form will have two text boxes to allow them to enter a minimum weight and a maximum weight.  It will also have two radio buttons to allow them to specify male or female.  Finally there should also be a submit button.</p>
+
+	<p>You need to write the JavaScript code to verify the form.  They must choose one of the genders and put in numbers into the text boxes such that the maximum is larger than the minimum.  When they click on the submit button if there are any errors, you should display a message and allow them to enter again (this mean stopping the default action of calling the php script).</p>
+
+	<p>If there are no errors, it should call the php script.  The script will return a page with the counts like in the image to the right.  First it should read in the data from the file but only use the records that were desired (weight should be between the min and max and the gender should match the one selected from the form).  For the matching records, maintain the counts for whether or not the patient has the virus and for the different blood types.  You should ignore the plus/minus part of the blood type.</p>
+
+	<p>After you have collected all of the counts display them in a table like the one shown to the right.  The counts listed there are for males between 140 and 200 lbs (just in case you want to check your work.</p>
+</div>
+<div>
+	<h1>Completing the assignment</h1>
+	<p>Due date: 2/12/14</p>
+	<p>To turn in the assignment, post the web page that you create on a
+		publicly accessible host and email me the URL.  <b>Be sure to:</b> </p>
+	<ul>
+		<li>Put your class and section in the subject, along with the assignment separated by a colon (e.g. "CS371:hw 4")</li>
+		<li>Include the URL in the body of the email</li>
+		<li>Include your name in the body of the email</li>
+		<li>Include a text version of the php code or a link to it</li>
+	</ul>
+	<p>Points: 10</p>
+</div>
+
+
+
+</body></html>

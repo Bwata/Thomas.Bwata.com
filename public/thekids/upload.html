@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="" content="">
+    <title>Upload</title>
+    <link href="stylesheets/timeline.css" rel="stylesheet">
+    <link href="stylesheets/upload.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../siteResources/cleditor/jquery.cleditor.css" />
+    <script src="../siteResources/jqueryLibraryMini.min.js" type="text/javascript"></script>
+    <script src="../siteResources/moment.js" type="text/javascript"></script>    
+    <script src="Javascripts/main.js" type="text/javascript"></script>
+    <script src="Javascripts/event.js" type="text/javascript"></script>
+    <script src="Javascripts/timeline.js" type="text/javascript"></script>
+    <script src="Javascripts/dateMark.js" type="text/javascript"></script>
+    <script src="Javascripts/startUpload.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../siteResources/cleditor/jquery.cleditor.min.js"></script>
+</head>
+<body>
+        
+
+</div>
+  
+  <div id="0_timeline" class="left_timeline timeline_col timeline_colorGreen">
+
+    <header>
+        <div class="timeline_label">
+            <h1 class="timeline_label_text">Inputs</h1>
+            <div class="timeline_connector"></div>
+        </div>
+    </header>
+    <div class="time_bar"></div>
+    <div class="time_bar_background"></div>
+
+    <div id="event_input" class="event_container">
+        <div class='event_title'>
+            <h2 class='event_title_text'>Input Event Data</h2>
+        </div>
+
+        <div class='event_body_border'>
+            <div class='event_body'>
+                <form name="eventInput" method="post" action="uploadProcessing.php">
+                    Title: <input type="text" name="title"><br>
+                    Date: <input type="text" name="date"> (YYYY/MM/DD)<br>
+                    <input type="radio" name="kid" value="0">Corben
+                    <input type="radio" name="kid" value="1">Trillium<br>
+                    <textarea id="textInput" rows="4" cols="50" name="content"></textarea>
+                    <input type="button" value="Test" onclick="showText()">
+                    Key: <input type="text" name="key">
+                    <input type="submit" value="Submit">
+                </form>
+
+                <!-- <form name="imageInput" method="post" enctype="multipart/form-data" action="uploadProcessing.php">
+                    ImageTitle: <input type="text" name="title"><br>
+                    Image Description: <br>
+                    <textarea id="imgDesc" rows="4" cols="50" name="content"></textarea><br>
+                    Upload Image: <input type="file" name="file" id="file"><br>
+                    Image name: <input type="text" name="title"><br>
+                    <input type="submit" name="submit" value="Submit">
+                </form> -->
+            </div>
+        </div>
+
+        <div class='timeline_connector'><div class='connector_inside'></div></div>
+    </div>
+  </div>
+
+
+
+
+  <div id="1_timeline" data-occupied="true" class="right_timeline timeline_col timeline_colorBlue">
+
+    <header>
+        <div class="timeline_label">
+            <h1 class="timeline_label_text">Testing</h1>
+            <div class="timeline_connector"></div>
+        </div>
+    </header>
+    <div class="time_bar"></div>
+    <div class="time_bar_background"></div>
+
+
+  </div>
+        
+<div class="hidden">
+    <div id="event_template" class="event_container">
+        <div class='event_title'>
+            <h2 class='event_title_text'>XXX</h2>
+            <h3 class='event_date'>
+                <time datetime='XXX'>XXX</time>
+            </h3>
+        </div>
+
+        <div class='event_body_border'>
+            <div class='event_body'>XXX</div>
+        </div>
+
+        <div class='timeline_connector'><div class='connector_inside'></div></div>
+    </div>
+
+    <div id="date_mark_template" class="date_mark">
+        <h4 class="date_mark_label">
+            <time datetime="XXX">XXX</time>
+        </h4>
+    </div>
+</div>
+        
+</body>
+</html>

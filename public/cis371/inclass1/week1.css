@@ -1,0 +1,43 @@
+#CIS h3 {
+	background-color: gray;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+#CIS td, #CIS p {	
+	color: blue;
+}
+
+.col_1, .col_2, .col_3 {
+	width: 33%;
+	float: left;
+	padding: 1px;
+}
+
+.col_end {
+	clear: both;
+}
+
+#courses h3 {
+	text-align: center;
+	background-color: green;
+	margin: 5px;
+}
+
+li {
+	font-family: arial, sans-sarif;	
+}
+
+table, th, td
+{
+	border: 1px solid black;
+}
+
+table {
+	border: 3px solid gray;
+}
+
+.imp {
+	color: red;
+}

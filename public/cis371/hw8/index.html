@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="" content="">
+    <title>Homework 8</title>
+    
+    
+     <link href="cssReset.css" rel="stylesheet">
+    <link href="CIS371AboutMe.css" rel="stylesheet">
+
+ <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+rel="stylesheet" type="text/css"/>
+ <script type="text/javascript"
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript"
+src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+
+
+
+
+<script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+
+
+ $(document).ready(function () {
+        $('ul li').hover(function () {
+            $(this).addClass('emph');
+        }, function () {
+            $(this).removeClass('emph');
+        });
+    });
+    
+$(window).width();
+    
+$(document).ready(function () {
+        $('#inspire').hover(function () {
+            $( this ).css( "margin-left", $(window).width()-430);
+        }, function () {
+            $( this ).css( "margin-left", "0px");
+        });
+    });
+
+  </script>
+
+</head>
+<body>
+    
+
+<div id="top">
+     	
+		<img src="thomas.png">
+		<h1>THOMAS Verstraete</h1>
+		
+		<p>JQuery seems to have a lot of nice great function but with the animations there are a lot of advancments in CSS3 that you don't need JWQuery for. The layouts however are difficult with HTML and CSS so I would want to learn more about that./p>
+
+		<p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
+
+		<p>Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+     
+     </div>   
+     
+     <div class="clear"></div>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Favorite Things To Do</a></li>
+    <li><a href="#tabs-2">Inspiring Person</a></li>
+    <li><a href="#tabs-3">Things I do in a Day</a></li>
+    <li><a href="#tabs-4">Courses I have Taken</a></li>
+    <li><a href="#tabs-5">Favorite Websites</a></li>
+    <li><a href="#tabs-6">Latin Quotes</a></li>
+  </ul>
+  <div id="tabs-1">
+    <ul>
+		<li>Play blocks with my kids</li>
+		<li>watching movies</li>
+		<li>Doin' stuff</li>
+		<li>sleeping</li>
+	</ul>
+  </div>
+  <div id="tabs-2">
+    <img id="inspire" src="http://upload.wikimedia.org/wikipedia/commons/3/30/Frank_Lloyd_Wright_portrait.jpg">
+    <div class="clear"></div>
+  </div>
+  <div id="tabs-3">
+    <ol>
+		<li>Wake up</li>
+		<li>get dressed</li>
+		<li>Drive to School</li>
+		<li>Change diapers</li>
+	</ol>
+  </div>
+  <div id="tabs-4">
+    <table>
+		<tr>
+			<td>CIS 371</td>
+			<td>Web Applications</td>
+			<td>3 Credits</td>
+		</tr>
+		<tr>
+			<td>ART 212</td>
+			<td>Graphic Design -Illustrators</td>
+			<td>3 Credits</td>
+		</tr>
+		<tr>
+			<td>CIS 452</td>
+			<td>Operating Systems Concepts</td>
+			<td>4 Credits</td>
+		</tr>
+		<tr>
+			<td>CIS 457</td>
+			<td>Data Communications</td>
+			<td>4 Credits</td>
+		</tr>
+	</table>
+  </div>
+  <div id="tabs-5">
+    <a href="http://www.dribbble.com">Dribbble</a>
+	<a href="http://www.apple.com">Apple</a>
+	<a href="http://dolekemp96.org">Dole Kemp '96</a>
+  </div>
+  <div id="tabs-6">
+    <h3>E pluribus unum</h3>
+	<h3 class="best">carpe canem</h3>
+	<h3>Post hoc ergo propter hoc</h3>
+  </div>
+</div>    
+
+
+        
+        
+        
+        
+        
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="PHP Lesson" content="PHP Lesson">
+    <title>PHP Lesson</title>
+    <!--link href=".css" rel="stylesheet"-->
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42864523-2', 'bwata.com');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+  function confSubmit() {
+    var min = Number(document.getElementById("min").value);
+    var max = Number(document.getElementById("max").value);
+
+    console.log("min is " + min + ": max is " + max);
+
+    if (max !=  NaN && min != NaN && max > min) {
+      return true;
+    } else {
+      document.getElementById("error").innerHTML = "error";
+      return false;
+    }
+
+  }
+
+</script>
+
+
+</head>
+<body style="width: 300px; margin: 0 auto;">
+  <h3 id="error" style="color:red;"></H3>
+	<form name="input" action="output.php" method="post" enctype="multipart/form-data" onsubmit="return confSubmit();">
+		minimum weight: <input type="text" name="minWeight" id="min"><br>
+ 		maximum weight: <input type="text" name="maxWeight" id="max"><br>
+		<input type="radio" name="sex" value="male" checked>Male<br>
+		<input type="radio" name="sex" value="female">Female<br>
+    <input type="submit" value="Submit">
+	</form>
+        
+        
+        
+        
+        
+        
+</body>
+</html>

@@ -1,0 +1,282 @@
+body {
+	width:220px;
+	height: 220px;
+	background:transparent;
+	
+	background-image: url('../Images/appLeftBar.png');
+	background-repeat: no-repeat;
+}
+
+.headerBox {
+	position: absolute;
+	width: 156px;
+	height:40px;
+	left:29px;
+	top:-5px;
+	
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+}
+
+.headerBox h4 {
+	text-align: center;
+	margin:0;
+	padding:0;
+	margin-top:-3px;
+}
+
+.headerBox img {
+	padding:0;
+	margin: 0px 68px;
+	margin-top:2px;
+	width: 20px;
+	height:20px;
+}
+
+#footerBox {
+	position: fixed;
+	width: 156px;
+	height:40px;
+	left:29px;
+	bottom:-5px;
+	
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+	transition: all 0.3s ease-out;
+}
+
+#footerBox .centerImg {
+	padding:0;
+	margin: 0px 63px;
+	margin-top:2px;
+	width: 30px;
+	height:30px;
+}
+
+
+#appFrame {
+	position:fixed;
+	width: 162px;
+	height:220px;
+	top:0px;
+	left:29px;
+	overflow:hidden;
+}
+
+#allSections {
+	position:absolute;
+	width:1000px;
+	top:0;
+	left:0;
+	transition: all 0.3s ease-out;
+}
+
+.section {
+	float:left;
+	width:162px;
+}
+
+.list {
+	position:relative;
+	top: 0px;
+	left: 0px;
+	
+	padding:40px 0px;
+	padding-bottom: 40px;
+
+    transition: all 0.3s ease-out;
+}
+
+.listItem {
+	position: relative;
+	width: 156px;
+	margin:5px 0;
+	padding:0;
+	overflow:hidden;
+	
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+}
+
+.listItem h3 {
+	margin:0;
+	margin-left: 3px;
+	padding:0;
+}
+
+.listItem h4 {
+	margin:0;
+	padding:0;
+	text-align: center;
+}
+
+.listItem p {
+	margin:0;
+	margin-left: 3px;
+	padding:0;
+
+}
+
+.listItem img {
+	position: absolute;
+	margin:0;
+	top: 3px;
+	left: 3px;
+	padding:0;
+	width: 30px;
+	height: 30px;
+}
+
+.listItemI {
+	position: relative;
+	width: 156px;
+	margin:5px 0;
+	padding:0;
+	overflow:hidden;
+	
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c5ddf2 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#c5ddf2 100%); /* W3C */
+
+	border: 3px solid #9aaa3c;
+
+	border-radius: 10px;
+}
+
+.listItemI h3 {
+	margin:0;
+	margin-left: 37px;
+	padding:0;
+}
+
+.listItemI h4 {
+	margin:0;
+	margin-left: 37px;
+	padding:0;
+	text-align: center;
+}
+
+.listItemI p {
+	margin:0;
+	margin-left: 37px;
+	padding:0;
+
+}
+
+.listItemI img {
+	position: absolute;
+	margin:0;
+	top: 3px;
+	left: 3px;
+	padding:0;
+	width: 30px;
+	height: 30px;
+}
+
+
+/*** Music App Styling***************************************/
+
+
+#albumCover {
+	position:absolute;
+	width:80px;
+	height:80px;
+	top:45px;
+	left:41px;
+	border-radius: 10px;
+	z-index:2;
+}
+
+.musicButton {
+	position:absolute;
+	width:40px;
+	height:40px;
+	background:white;
+	opacity: .8;
+	border-radius: 20px;
+	box-shadow: 0px 3px 5px #888888;
+	transition: all .3s ease-out;
+}
+
+.musicButton img {
+	position:relative;
+	width:34px;
+	height:34px;
+	margin:3px;
+	top:0;
+	left:0;
+	overflow:visible;
+}
+
+#musicPlay {
+	left:51px;
+	top: 155px;
+	width:60px;
+	height:60px;
+	opacity: 0;
+	z-index: -1;
+	border-radius: 30px;
+}
+
+#musicPlay img{
+	width:54px;
+	height:54px;
+}
+
+#musicPause {
+	left:51px;
+	top: 155px;
+	width:60px;
+	height:60px;
+	opacity: 1;
+	z-index: 1;
+	border-radius: 30px;
+}
+
+#musicPause img{
+	width:52px;
+	height:52px;
+}
+
+#musicNext {
+	right:5px;
+	top: 155px;
+}
+
+#musicNext img {
+	width:30px;
+	height:30px;
+	margin:5px;
+}
+
+#musicPrev {
+	left:5px;
+	top: 155px;
+}
+
+#musicPrev img {
+	width:30px;
+	height:30px;
+	margin:5px;
+}
+
+#musicTitle {
+	margin-top:87px;
+	width:auto;
+	max-width:200px;
+}

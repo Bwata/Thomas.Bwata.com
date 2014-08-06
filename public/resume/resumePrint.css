@@ -1,0 +1,203 @@
+/*   Reset Styling   */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ol, ul, li, blockquote, pre, form, lable, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body, p {
+	line-height: 1;
+	font-family: 'Roboto', sarif;
+	font-size: 8pt;
+}
+
+p, h1, h2, h3, h4, h5, h6, ol, ul, li { margin: 5pt; }
+li { margin-left: 2em; }
+
+h1, h2, h3, h4, h5, h6 {
+	line-height:1;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+
+h1 { font-size: 200%; }
+h2 { font-size: 180%; }
+h3 { font-size: 160%; }
+h4 { font-size: 140%; }
+h5 { font-size: 120%; }
+h6 { font-size: 100%; }
+
+pre { font-family: consolas, monospace; }
+
+.clear {
+	clear: both;
+}
+
+/********************* Resume Styling **************************/
+
+body {
+	width: 7.75in;
+	margin: 0 auto;
+}
+
+#header {
+	height: .68in;
+	padding: 5px;
+	padding-bottom:0;
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	
+	background-image:url('HourglassSmall.png');
+	background-repeat:no-repeat;
+	background-size: 75px 75px;
+	background-color: #ff3333;
+	padding-left: 80px;
+}
+
+#header h1 {
+	font-size: 400%;
+	margin-bottom:0;
+	margin-top:0;
+}
+
+#header h4 {
+	float: left;
+	margin-top:0;
+}
+
+#right {
+	float: right;
+	height:8.5in;
+	overflow: hidden;
+}
+
+#left {
+	float: left;
+	height:8.5in;
+}
+
+.prime {
+	width: 5.8in;
+	padding: 0;
+	margin: 5px;
+	margin-right: 0;
+	margin-top:0;
+	
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	
+    -webkit-transition: all 0.1s ease-out;
+       -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+         -o-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+}
+
+
+.prime h2 {
+	padding: 3px;
+	margin: 0;
+	padding-left: 35px;
+}
+
+#objective {
+	border: 3px solid #33ff38;
+}
+
+#objective h2 {
+	background-image:url('ObjTargetSmall.png');
+	background-repeat:no-repeat;
+	background-color:#33ff38;
+}
+
+#experience {
+	border: 3px solid #ffc833;
+}
+
+#experience h2 {
+	background-image:url('ExpHammerSmall.png');
+	background-repeat:no-repeat;
+	background-color:#ffc833;
+}
+
+#education {
+	border: 3px solid #33d1ff;
+}
+
+#education h2 {
+	background-image:url('EduBooksSmall.png');
+	background-repeat:no-repeat;
+	background-color:#33d1ff;
+}
+
+.unit {	
+	margin:7px 0;
+}
+
+.side {
+	width: 1.75in;
+	height:8.4in;
+	padding: 0;
+	margin: 5px;
+	margin-left: 0;
+	
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	
+    -webkit-transition: all 0.1s ease-out;
+       -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+         -o-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+}
+
+.side h2 {
+	padding: 3px;
+	margin: 0;
+	padding-left: 35px;
+}
+
+#skills {
+	border: 3px solid #d85aa1;
+}
+
+#skills h2 {	
+	background-image:url('EduBooksSmall.png');
+	background-repeat:no-repeat;
+	background-color: #d85aa1;
+}
+
+#skills h3 {
+	margin-left:0;
+	margin-right:0;
+	border-top: 3px solid #d85aa1;
+	border-bottom: 3px solid #d85aa1;
+	text-align: center;
+}
+
+#skills p {
+	text-align: center;
+	margin-left: 4px;
+	margin-right:4px;
+	font-size: 11pt;
+	line-height: 1.25;
+}
+
+.date {
+	float: right;
+	margin:0;
+	margin-right: 5pt;
+}

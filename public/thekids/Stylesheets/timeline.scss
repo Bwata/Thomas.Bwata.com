@@ -1,0 +1,249 @@
+@import 'main';
+
+.hidden {
+	visibility: hidden;
+	display: none;
+}
+
+.timeline_col {
+	width: 50%;
+	height: 100%;
+	float: left;
+	position: relative;
+
+	.date_mark {
+		position: absolute;
+		left: 0;
+		top: 2620px;
+		width: 100%;
+		border-top: 1px solid $timeBarColor;
+		@include boxSizing(border-box);
+		z-index: -1;
+
+		.date_mark_label {
+			@include boxSizing(border-box);
+			color: $backgroundColor;
+			width: 100px;
+			height: 3ex;
+			background-color: $timeBarColor;
+			text-align: center;
+		}
+	}
+
+	.timeline_connector {
+		width: 20px;
+		height: 15px;
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.timeline_label {
+		position: absolute;
+		top:0px;
+
+		.timeline_connector {
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+
+	.time_bar {
+		width: 5px;
+		height: 100%;
+		border-style: solid;
+		border-width: 0px;
+		position: absolute;
+		z-index: 4;
+	}
+
+	.time_bar_background {
+		width: 20px;
+		height: 100%;
+		background-color: $timeBarColor;
+	}
+
+	.event_container {
+		width: 85%;
+		position: absolute;
+		top: 100px;
+
+		.event_title {
+			height: 30px;
+			width: 100%;
+			position: relative;
+
+			.event_date {
+				position: absolute;
+				bottom: 4px;
+			}
+		}
+
+		.event_body_border {
+			width: 70%;
+			min-width: 280px;
+			max-width: 500px;
+			position: relative;
+
+			.event_body {
+				width: 90%;
+				min-width: 250px;
+				padding: 1ex;
+				margin-bottom: 10px;
+				overflow: hidden;
+
+				p {
+					@include noSpace;
+					@include boxSizing(border-box);
+					padding: 1ex;
+				}
+
+				img {
+					@include noSpace;
+					width: 100%;
+				}
+			}
+		}
+
+		.timeline_connector {
+			z-index: 1;
+		}
+
+	}
+}
+
+
+/** This section is for Coloring of events in the time bar *****/
+
+@each $type, $colors in $timelineTypes {
+	$eventBorderColor: nth($colors, 2);
+	$eventBodyColor: nth($colors, 1);
+
+	.timeline_#{$type} {
+
+		.timeline_label {
+			background-color: $eventBorderColor;
+			@include shadow(false, darken($eventBorderColor, 30%));
+			.timeline_connector {
+				@include labelConnectorImage($type);
+				z-index: 6;
+			}
+		}
+
+		.time_bar {
+			background-color: $eventBorderColor;
+			@include shadow(false, darken($eventBorderColor, 20%));
+		}
+
+		.event_container {
+			// border-top: solid 1px lighten($eventBorderColor, 30%);
+
+			.event_title {
+				background-color: $eventBorderColor;
+				@include shadow(false, darken($eventBorderColor, 20%));
+				border-top: solid 1px lighten($eventBorderColor, 30%);
+
+			}
+
+			.event_body_border {
+				background-color: $eventBorderColor;
+				@include shadow(false, darken($eventBorderColor, 30%));
+
+				.event_body {
+					background-color: $eventBodyColor;
+				}
+			}
+
+			.timeline_connector {
+				@include eventConnectorImage($type);
+			}
+		}
+	}
+}
+
+
+/** This section is for positioning of events in the time bar *****/
+
+$screenSide : (
+	left : right,
+	right : left
+	);
+
+@each $outside, $inside in $screenSide {
+
+	.#{$outside}_timeline {
+
+		.timeline_label {
+			#{$inside}: 0px;
+			border-bottom-#{$outside}-radius: 30px;
+			padding-#{$outside}: 20px;
+			padding-#{$inside}: 15px;
+
+			.timeline_connector {
+				#{$inside}: 0px;
+				@if $outside == right {
+					@include flipImageHoriz;
+				}
+			}
+		}
+
+		.time_bar {		
+			#{$inside}: 0px;
+		}
+
+		.time_bar_background {
+			float: #{$inside};
+		}
+
+		.date_mark {
+			.date_mark_label {
+				float: #{$outside};
+				border-bottom-#{$inside}-radius: 1.25ex;
+			}
+		}
+
+		.event_container {
+			#{$inside}: 0px;
+
+			.event_title {
+				border-top-#{$outside}-radius: 30px;
+				border-bottom-#{$inside}-radius: 20px;
+
+				h2 {
+					float: #{$outside};
+					margin-#{$outside}: 35px; 
+				}
+
+				.event_date {
+					#{$inside}: 0px;
+					margin-#{$inside}: 25px; 
+				}
+
+			}
+
+			.event_body_border {
+				float: #{$outside};
+				border-bottom-#{$inside}-radius: 30px;
+				border-bottom-#{$outside}-radius: 20px;
+
+				.event_body {
+					float: #{$inside};
+					margin-#{$inside}: 10px;
+					margin-#{$outside}: 20px;
+					border-top-#{$outside}-radius: 15px;
+					border-bottom-#{$outside}-radius: 10px;
+					border-bottom-#{$inside}-radius: 20px;
+				}
+			}
+
+			.timeline_connector {
+				#{$inside}: 0px;
+				@if $outside == right {
+					@include flipImageHoriz;
+				}
+				#{$inside}: 0px;
+				top: -14px;
+			}
+		}
+	}
+}

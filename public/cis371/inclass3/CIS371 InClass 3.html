@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://cis.gvsu.edu/~schelhak/cs371/inclass3/ -->
+<html lang="en"><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Kyle Schelhaas | CIS371 InClass 3</title>
+		<link rel="stylesheet" href="http://cis.gvsu.edu/~schelhak/cs371/inclass3/inclass3.css">
+
+		<!-- Javascript -->
+		<script>
+			var pos_x = 10;
+			var pos_y = 10;
+
+			function moveSnoopy(e) {
+				var evt = e ? e:event;
+				var key = evt.keyCode;
+				var snoopy = document.getElementById("snoopy").style;
+
+				switch(key) {
+					case 37: // left
+						pos_x = pos_x - 25;
+						break;
+					case 38: // up
+						pos_y = pos_y - 25;
+						break;
+					case 39: // right
+						pos_x = pos_x + 25;
+						break;
+					case 40: // down
+						pos_y = pos_y + 25;
+						break;
+					default:
+						break;
+				};
+
+				snoopy.left = pos_x + "px";
+				snoopy.top = pos_y + "px";
+
+				checkIsHome();
+			}
+
+			function checkIsHome() {
+				if((pos_x > 800) && (pos_x < 913)) {
+					if((pos_y > 400) && (pos_y < 510))
+					alert("Snoopy found his dog house.");
+				}
+			}
+		</script>
+	<style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head>
+	
+	<body onkeydown="moveSnoopy()">
+		<img src="./CIS371 InClass 3_files/snoopy1.jpeg" id="snoopy" alt="Snoopy" height="110" width="87">
+		<img src="./CIS371 InClass 3_files/snoopy2.jpeg" id="doghouse" alt="Dog House" width="200">
+	
+
+</body></html>

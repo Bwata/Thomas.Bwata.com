@@ -1,0 +1,9 @@
+<!-- f500.dtd -->
+<!ELEMENT companies (company+)>
+<!ELEMENT companyA (Year, Rank, Revenue, Profit, Company)>
+<!ELEMENT Year (#PCDATA)>
+<!ELEMENT Rank (#PCDATA)>
+<!ELEMENT Revenue (#PCDATA)>
+<!ELEMENT Profit (#PCDATA)>
+<!ELEMENT Company (#PCDATA) >
+

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="" content="">
+    <title></title>
+    <link href="elements.css" rel="stylesheet">
+
+<script>
+function startRain() {
+
+	var width = window.innerWidth;
+	var rain = document.getElementById("rain");
+	var pause = 80;
+	setInterval(function(){createDrop(width, rain);},pause);
+
+}
+
+function createDrop (width, rain) {
+	var drop = document.createElement("div");
+	drop.className = "raindrop";
+	
+	var value = Math.floor(Math.random() * (width-20)); //
+	drop.style.left= value + "px";
+	
+	value = (Math.random() * 500) + 360;
+	drop.style.webkitTransform = "rotateX(" + value + "deg)";
+	drop.style.transform = "rotateX(" + value + "deg)";
+	
+	value = (Math.random() * 1000) + 3500;
+	drop.style.WebkitAnimationDuration = value + "ms";
+	drop.style.animationDuration = value + "ms";
+	
+	document.getElementById("rain").appendChild(drop);
+	setTimeout(function(){drop.parentNode.removeChild(drop)},value);
+}
+
+
+
+var angle = 0;
+var side = 0;
+
+function rotate () {
+	console.log("clicked: " + angle);
+	var box = document.getElementById("cube");
+	angle = (angle + 45);
+	box.style.WebkitTransform = "rotateY(" + angle + "deg)"
+	box.style.transform = "rotateY(" + angle + "deg)"
+}
+
+function rotate2 (num) {
+
+	if ((side - num) == 1) {
+		angle = (angle - 90);
+	} else if ((side - num) == -1) {
+		angle = (angle + 90);
+	} else if ((side - num) == 2) {
+		angle = (angle - 180);
+	} else if ((side - num) == -2) {
+		angle = (angle + 180);
+	} else if ((side - num) == 3) {
+		angle = (angle + 90);
+	} else if ((side - num) == -3) {
+		angle = (angle - 90);
+	} else {
+		
+	}
+
+	side = num;
+
+	console.log("clicked: " + angle);
+	var box = document.getElementById("cube");
+	//angle = num;
+	box.style.WebkitTransform = "rotateY(" + angle + "deg)"
+	box.style.transform = "rotateY(" + angle + "deg)"
+}
+
+
+
+
+
+
+</script>    
+    
+    
+</head>
+<body onload="startRain()">
+<div id="rain">
+<!-- <div class="raindrop"></div> -->
+</div>
+<script>
+var rainBox = document.getElementById("rain");
+rainBox.style.width = window.innerWidth;
+rainBox.style.height = window.innerHeight;
+
+</script>
+
+ <div class="wrap" onclick="rotate()">
+	<div id="cube" class="cube">
+		<div class="front"><div class="panel">fire</div></div>
+		<div class="back"><div class="panel">air</div></div>
+		<!-- <div class="top"><div class="panel">top</div></div> -->
+		<!-- <div class="bottom"><div class="panel">bottom</div></div> -->
+		<div class="left"><div class="panel">water</div></div>
+		<div class="right"><div class="panel">earth</div></div>
+	</div>
+</div>       
+     
+<div class="buttons">   
+	<div class="button" onclick="rotate2 (0)">fire</div>        
+	<div class="button" onclick="rotate2 (1)">water</div> 
+	<div class="button" onclick="rotate2 (2)">air</div> 
+	<div class="button" onclick="rotate2 (3)">earth</div>      
+</div>   
+        
+        
+        
+        
+        
+</body>
+</html>

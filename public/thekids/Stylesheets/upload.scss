@@ -1,0 +1,11 @@
+@import 'main';
+
+.timeline_col {
+  height: 100%;
+}
+
+.left_timeline {
+  .event_container .event_body_border {
+    width: 100%;
+  }
+}

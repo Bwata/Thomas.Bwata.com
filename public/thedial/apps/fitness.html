@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="testtouch" content="testtouch">
+    <title>theDial</title>
+    <link href="../CSS/app2.css" rel="stylesheet">
+    <meta name="viewport" 
+  content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+</head>
+
+<!-- TODO: 
+	- finish the content
+	- make rick play music
+	- work in logging -->
+
+<!-- ['popUp', 'Text', 'top', 'bottom', 'action'] -->
+<!-- ['user_message', 'message'] -->
+<!-- app, headers, footers, openStack, openIndex -->
+<body id="watchface" onload="app_setUp('fitness', 
+{fitnessMain: 'Fitness', stats: 'Stats', map: 'Route'}, 
+{fitnessMain: true, stats: true, map: true}, 
+['fitnessMain'], 0)">
+	
+	
+	<div id="appFrame">
+
+		
+			<!-- fitness main -->
+			<div class="section" id="fitnessMain">
+				<div class="list" id="fitnessMainslide">
+				
+					<div class="listItem">
+						<h4>Duration</h4>
+						<h2 id="mainDurationTimer">1:23:47</h2>
+					</div>
+				
+					<a onclick="item_scroll_left ('stats')">
+						<div class="listItem" id="fitStatsButton">
+							<h4 id="fitStatsButtonLabel">Stats</h4>
+						</div>
+					</a>
+					
+					<a onclick="item_scroll_left ('map')">
+						<div class="listItem" id="fitMapButton">
+							<h4 id="fitMapButtonLabel">Route</h4>
+						</div>
+					</a>
+				</div>
+			</div>
+		
+			<!-- stats -->
+			<div class="section" id="stats">
+				<div class="list" id="statsslide">
+					<div class="listItem" id="fitHeartRate">
+						<img src="../Images/heartRate.png">
+					</div>
+					
+					<div class="listItem">
+						<p>Duration: 1:23:47</p>
+						<p>Distance: 23.13 miles</p>
+						<p>AvgSpeed: 17.8 mph</p>
+						<p>MaxSpeed: 23.6</p>
+						<p>Calories: 1223</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- map -->
+			<div class="section" id="map">
+				<div class="list" id="mapslide">
+					<img id="fitnessMap" src="../Images/fitnessMap.jpg">
+				</div>
+			</div>
+	
+	</div>
+
+	<div class="headerBox">
+		<img src="../Images/SwitcherIcons/Fitness.png">
+		<h4 id="headerText"></h4>
+	</div>
+	
+	<a onclick="footer_button()">
+		<div id="footerBox">
+			<img class="centerImg" id="footerFitnessPlay" src="../Images/SwitcherIcons/stop.png">
+		</div>
+	</a>
+
+	<script src="../Javascripts/app2.js" type="text/javascript"></script>
+</body>
+</html>

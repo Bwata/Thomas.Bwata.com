@@ -1,0 +1,48 @@
+/* My Styling */
+
+body {
+	font-family: "times medium";
+	color: black;
+}
+
+tables p {
+	font-size: small;
+}
+
+ol {
+	list-style-type: lower-alpha;
+}
+
+ul {
+	color: blue;
+}
+
+.best {
+	font-style:italic;
+}
+
+a {
+	color: red;
+}
+
+a:visited {
+	color: green;
+}
+
+.odd {
+	background-color: #ccc;
+}
+
+.links {
+	font-family: "sans-serif";
+}
+
+.even img {
+	width: 100px;
+	float:none;
+}
+
+img { 
+	float:right;
+}
+

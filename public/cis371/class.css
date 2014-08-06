@@ -1,0 +1,74 @@
+a {
+	text-decoration: underline;
+}
+
+
+
+li { 
+	margin-left: 2em; 
+	list-style-image:  url("../images/dot3.png");
+}
+
+/*	Title Bar	*/
+
+#titlebar {
+	margin:0;
+	width: 500px;
+	height: 50px;
+	background-color: #d85aa1;
+
+}
+
+#titlebar h1 {
+	color: white;
+	font-size: 290%;
+	margin: 0 5px;
+}
+
+#titleBox {
+	position:relative;
+	transition: all .3s ease-out;
+}
+
+#titleBox h1 {
+	position:absolute;
+	top: -3px;
+	transform: rotateX(90deg);
+	-webkit-transform: rotateX(90deg); /* Safari and Chrome */
+	transition: all .3s ease-out;
+}
+
+/*	Body styling	*/
+
+#bod {
+	margin: 5px;
+	position:relative;
+	margin-left: 55px;
+	border: 5px solid  #d85aa1;
+	width: 500px;
+	Background-color:white;
+	
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	
+	box-shadow: 4px 4px 7px #888888;
+}
+
+#bodyArea {
+	overflow: hidden;
+	
+	transition: all .3s ease-out;
+}
+
+.bodSection {
+	margin: 0 5px;
+}
+
+.divider {
+	height:1px;
+	margin: 5px 5px;
+	border-bottom: 5px solid  #d85aa1;
+}
